@@ -1,3 +1,34 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+from random import randint
+
+class GameBoard():
+    def __init__(self, size, num_of_ships, name, type):
+        self.size = size
+        self.board = [["." for _ in range(size)] for _ in range(size)]
+        self.num_of_ships = num_of_ships
+        self.name = name
+        self.type = type
+        self.guesses = []
+        self.ships = []
+
+    def print_board(self):
+        for row in self.board:
+            print("  ".join(row))
+
+    def make_guess(self, x, y):
+        if (x, y) in self.guesses:
+            return "Already guessed this coordinate. Try again."
+
+        self.guesses.append((x, y))
+
+        if (x, y) in self.ships:
+            self.board[x][y] = "@"
+            return "Hit"
+        else:
+            self.board[x][y] = "X"
+            return "Miss"
+
+    def add_ship(self, x, y, type="computer"):
+        if len(self.ships) >= self.num_of_ships:
+            print("You cannot add any more ships")
+        else:
+            self.ships.append((x, y))
