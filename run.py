@@ -32,3 +32,11 @@ class GameBoard():
             print("You cannot add any more ships")
         else:
             self.ships.append((x, y))
+
+def random_point(size):
+    return randint(0, size - 1)
+
+def valid_coordinates(x, y, board):
+    if x < 0 or y < 0 or x >= board.size or y >= board.size:
+        return False
+    return True
