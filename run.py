@@ -90,3 +90,30 @@ def play_game(player_board, computer_board):
         if all(ship == "@" for ship in player_board.ships):
             print("The computer found all your ships! You lose.")
             break
+
+def run_game():
+    size = 5
+    num_of_ships = 4
+
+    print("-" * 35)
+    print("Welcome to Battleship Game")
+    print("Guess and shoot at the enemy's board")
+    print("The first to destroy all of the enemy's ships wins.")
+    print(f"Board size: {size}. Number of ships: {num_of_ships}")
+    print("Top left corner is row: 0 col: 0")
+
+    username = input("Enter your name: \n ")
+    while not username.isalpha():
+        print("Invalid name. Only letters are allowed.")
+        username = input("Enter your name: \n ")
+
+    computer_board = GameBoard(size, num_of_ships, "computer", type="computer")
+    player_board = GameBoard(size, num_of_ships, username, type="player")
+
+    for _ in range(num_of_ships):
+        populate_board(player_board)
+        populate_board(computer_board)
+
+    play_game(player_board, computer_board)
+
+run_game()
