@@ -58,8 +58,8 @@ def play_game(player_board, computer_board):
 
         while True:
             try:
-                x = int(input(f"{player_board.name}, enter the row: "))
-                y = int(input(f"{player_board.name}, enter the col: "))
+                x = int(input(f"{player_board.name}, enter the row: \n "))
+                y = int(input(f"{player_board.name}, enter the col: \n "))
 
                 if not valid_coordinates(x, y, computer_board):
                     print("Invalid coordinates. Try again.")
