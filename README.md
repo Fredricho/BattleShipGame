@@ -7,7 +7,7 @@ When you hit a ship, you will see "@" on the board and "Hit", if you miss you wi
 
 The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.github.)
 
-<img src="assets/images/.png" 
+<img src="assets/images/mock.png" 
   style="height:200px width:200px;">
 
 
@@ -19,7 +19,6 @@ The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.githu
   * ### Randomly generated boards.
     * Randomly adds ships to the board, so they will be located at diffrent places after each battle.
 
-    <img src="assets/images/.png" style="height:auto; width:200px;">
 
   * ### Play against the computer
     * The player plays against the computer
@@ -31,9 +30,9 @@ The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.githu
     Valid coordinates are integers from 0 -4. You can't guess at the same coordinate twice.
     The data is stored in the board class.
 
-<img src="assets/images/.png" style="height:auto; width:500px;">
-<img src="assets/images/.png" style="height:auto; width:500px;">
-<img src="assets/images/.png" style="height:auto; width:500px;">
+<img src="assets/images/1.png" style="height:auto; width:500px;">
+<img src="assets/images/2.png" style="height:auto; width:500px;">
+<img src="assets/images/3.png" style="height:auto; width:500px;">
 
  
 
@@ -56,9 +55,16 @@ The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.githu
 
 The game has gone through CI Python Linter Code validator and has been manually tested by me for many hours and also by peers, no errors were reported. The CI Linter Code found several minor errors such as whitespaces, unexpected amount of blanklines too long lines etc. All of the errors were fixed, beside the too long lines, the longest one were a comment of the code and the other were printing messages for the player. Images of the result below(You cannot see all of the errors, there were a few more.)
 
+ * Manual test:
+  * Only letter for username: CHECK
+  * Only integers in range for coordinates (0 - 4): CHECK
+  * Rematch after the battle is over (YES,NO,no,NO) as valid answers: CHECK
+  * The game ends after the player or computer has found all ships : CHECK
+
+
 
 * ### CI Python Linter Code
-<img src="assets/images/.png">
+<img src="assets/images/errors.png" style="height:auto; width:40rem;">
 
  ## Known Bugs
  * Resolved
@@ -99,7 +105,6 @@ A copy of the repository can be made and changes to the copy won't affect the or
 1. Login in and go to [Link to repository](https://github.com/Fredricho/battleship-game)
 2. The fork icon is top right, click that button to make a copy of the original repository.
 
-<img src="assets/images/fork.png" style="height:auto; width:40rem;">
 
 ## Create a local clone of this project
 
@@ -113,15 +118,15 @@ Here comes a guide to creating a local clone of this project:
 6. Type git clone and CTRL-V/Paste the URL from the previous step from Github 
 7. Hit enter and a clone will be created.
 
-<img src="assets/images/clone.png" style="height:auto; width:40rem;">
+
 
 ## Credits
 * Heroku- For make it possible to deploy.
 * CI Scoping Video, Battleship Game
-* Gitpod - For giving me the nessecary tools to develop a site. 
+* Gitpod - as the IDE and code editor 
 * ChatGpt - For generated Quiz questions and answers.
 * W3schools - For all of the information, always useful.
-* My mentor.
+* My brother and friend, for help me to ge on the right track.
 * Stack Overflow
 * The slack community on CI
 

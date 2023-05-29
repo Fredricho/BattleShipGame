@@ -3,6 +3,8 @@ Import randint from random
 """
 from random import randint
 # This class is inlfuenced by the CI scoping video.
+
+
 class GameBoard():
     """
     GameBoard is the the class, that sets the size, number of ships, name, type (if player or computer),
@@ -28,11 +30,11 @@ class GameBoard():
         self.guesses.append((x, y))
 
         if (x, y) in self.ships:
-            self.ships.remove((x, y))  
-            self.board[x][y] = "@"  
+            self.ships.remove((x, y))
+            self.board[x][y] = "@"
             return "Hit"
         else:
-            self.board[x][y] = "X"  
+            self.board[x][y] = "X"
             return "Miss"
 
     def add_ship(self, x, y, type="computer"):
@@ -41,11 +43,13 @@ class GameBoard():
         else:
             self.ships.append((x, y))
 
+
 def random_point(size):
     """
     Function to return a random coordinate between 0 and the given size of the board
     """
     return randint(0, size - 1)
+
 
 def valid_coordinates(x, y, board):
     """
@@ -55,9 +59,10 @@ def valid_coordinates(x, y, board):
         return False
     return True
 
+
 def populate_board(board):
     """
-    The function for placing out the correc amount of ships
+    The function for placing out the correct amount of ships
     """
     while True:
         x = random_point(board.size)
@@ -65,6 +70,7 @@ def populate_board(board):
         if (x, y) not in board.ships:
             board.add_ship(x, y)
             break
+
 
 def play_game(player_board, computer_board):
     """
@@ -111,6 +117,7 @@ def play_game(player_board, computer_board):
             print("The computer found all your ships! You lose.")
             return "Loose"
 
+
 def run_game():
     """
     This is the function that runs the game, sets the size and num of ships, validates
@@ -133,7 +140,6 @@ def run_game():
         else:
             print("Invalid name. Only letters are allowed.")
 
-
     while True:
         computer_board = GameBoard(size, num_of_ships, "computer", type="computer")
         player_board = GameBoard(size, num_of_ships, username, type="player")
@@ -144,14 +150,12 @@ def run_game():
 
         result = play_game(player_board, computer_board)
 
-
         print(f"{player_board.name}'s Board after the last hit:")
         player_board.print_board()
         print("Computer's Board after the last hit:")
         computer_board.print_board()
 
         print(f"{player_board.name} {result} the game!")
-
 
         while True:
             play_again = input("Do you want to play again? (yes/no) \n ")
@@ -163,6 +167,5 @@ def run_game():
             else:
                 print("Invalid input. Please answer with either 'yes' or 'no'.")
 
-    
 
 run_game()
