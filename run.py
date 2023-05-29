@@ -84,8 +84,8 @@ def play_game(player_board, computer_board):
 
         while True:
             try:
-                x = int(input(f"{player_board.name}, enter the row, Integers: 0 -4: \n "))
-                y = int(input(f"{player_board.name}, enter the col Intergers: 0-4 : \n "))
+                x = int(input(f"{player_board.name}, Insert your row coordinates, Integers: 0 - 4: \n "))
+                y = int(input(f"{player_board.name}, Insert your column coordinates, Integers: 0 - 4 : \n "))
 
                 if not valid_coordinates(x, y, computer_board):
                     print("Invalid coordinates. Guess at a integer from 0 - 4")
@@ -101,7 +101,7 @@ def play_game(player_board, computer_board):
 
         if len(computer_board.ships) == 0:
             print(f"Congratulations, {player_board.name}! You found all the computer's ships!")
-            return "win"
+            return "Won"
 
         print("Computer is making a guess...")
         while True:
@@ -114,8 +114,8 @@ def play_game(player_board, computer_board):
                 break
 
         if len(player_board.ships) == 0:
-            print("The computer found all your ships! You lose.")
-            return "Loose"
+            print("The computer found all your ships! You lost the battle : /.")
+            return "Lost"
 
 
 def run_game():
@@ -155,7 +155,7 @@ def run_game():
         print("Computer's Board after the last hit:")
         computer_board.print_board()
 
-        print(f"{player_board.name} {result} the game!")
+        print(f"{player_board.name} {result} the Battle!")
 
         while True:
             play_again = input("Do you want to play another round? ('yes' or 'no') \n ")
