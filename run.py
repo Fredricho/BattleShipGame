@@ -74,9 +74,9 @@ def play_game(player_board, computer_board):
             except ValueError:
                 print("Invalid input. Only integers are allowed.")
 
-        if all(ship == "@" for ship in computer_board.ships):
+        if len(computer_board.ships) == 0:
             print(f"Congratulations, {player_board.name}! You found all the computer's ships!")
-            break
+            return "win"
 
         print("Computer is making a guess...")
         while True:
@@ -88,9 +88,9 @@ def play_game(player_board, computer_board):
                 print(result)
                 break
 
-        if all(ship == "@" for ship in player_board.ships):
+        if len(player_board.ships) == 0:
             print("The computer found all your ships! You lose.")
-            break
+            return "Loose"
 
 def run_game():
     size = 5
@@ -103,18 +103,43 @@ def run_game():
     print(f"Board size: {size}. Number of ships: {num_of_ships}")
     print("Top left corner is row: 0 col: 0")
 
-    username = input("Enter your name: \n ")
-    while not username.isalpha():
-        print("Invalid name. Only letters are allowed.")
+    while True:
         username = input("Enter your name: \n ")
+        if username.isalpha():
+            break
+        else:
+            print("Invalid name. Only letters are allowed.")
 
-    computer_board = GameBoard(size, num_of_ships, "computer", type="computer")
-    player_board = GameBoard(size, num_of_ships, username, type="player")
 
-    for _ in range(num_of_ships):
-        populate_board(player_board)
-        populate_board(computer_board)
+    while True:
+        computer_board = GameBoard(size, num_of_ships, "computer", type="computer")
+        player_board = GameBoard(size, num_of_ships, username, type="player")
 
-    play_game(player_board, computer_board)
+        for _ in range(num_of_ships):
+            populate_board(player_board)
+            populate_board(computer_board)
+
+        result = play_game(player_board, computer_board)
+
+
+        print(f"{player_board.name}'s Board after the last hit:")
+        player_board.print_board()
+        print("Computer's Board after the last hit:")
+        computer_board.print_board()
+
+        print(f"{player_board.name} {result} the game!")
+
+
+        while True:
+            play_again = input("Do you want to play again? (yes/no) \n ")
+            if play_again.lower() == "yes":
+                break
+            elif play_again.lower() == "no":
+                print("Thank you for playing! Goodbye!")
+                return
+            else:
+                print("Invalid input. Please answer with either 'yes' or 'no'.")
+
+    
 
 run_game()
