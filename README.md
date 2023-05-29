@@ -64,7 +64,9 @@ The game has gone through CI Python Linter Code validator and has been manually 
 
 
 * ### CI Python Linter Code
-<img src="assets/images/errors.png" style="height:auto; width:40rem;">
+ * Here's an image of the result after fixes white whitespaces, blanklines and some adjusments to a few lines of code. The other ones were left, since they are comments or does not affect the functions of the game. 
+ 
+<img src="assets/images/fixed.png" style="height:auto; width:40rem;">
 
  ## Known Bugs
  * Resolved
@@ -93,7 +95,11 @@ The game has gone through CI Python Linter Code validator and has been manually 
  8. If manual click "Deploy Branch"
  9. Click view, to see the deployed game
 
- <img src="assets/images/.png" style="height:auto; width:40rem;">
+ <img src="assets/images/h1.png" style="height:auto; width:40rem;">
+ <img src="assets/images/h2.png" style="height:auto; width:40rem;">
+ <img src="assets/images/h3.png" style="height:auto; width:40rem;">
+ <img src="assets/images/h4.png" style="height:auto; width:40rem;">
+ <img src="assets/images/h5.png" style="height:auto; width:40rem;">
 
  [Link to repository](https://github.com/Fredricho/battleship-game)
 
