@@ -5,7 +5,7 @@ The rules of this game is simple, you should guess were the opponets(computer's)
 When you hit a ship, you will see "@" on the board and "Hit", if you miss you will see "X" and "Miss.
 
 
-The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.github.)
+The game is live here, Enjoy the game! [BattleShipGame](https://battleship-game9.herokuapp.com/)
 
 <img src="assets/images/mock.png" 
   style="height:200px width:200px;">
@@ -85,6 +85,7 @@ The game has gone through CI Python Linter Code validator and has been manually 
 
    ## Deployment
  The site was deployed on Heroku, and the steps to it is below:
+ And some images of most of the steps, but you will have to follow the text below!!
  1. Heroku > New > App Name(A unique one!) > Region > Creat App
  2. Go to settings > Reveal Config Vars
  3. Add Key: PORT and Value: 8000 ( If other Vars needs to be added add them here.) > Add
