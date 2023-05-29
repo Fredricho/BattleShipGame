@@ -27,7 +27,7 @@ The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.githu
     * Handles given coordinates from the player.
      
    * ### Validates input
-    * Validates all inputs from player, the name has to be just letters from the alphabet. 
+     * Validates all inputs from player, the name has to be just letters from the alphabet. 
     Valid coordinates are integers from 0 -4. You can't guess at the same coordinate twice.
     The data is stored in the board class.
 
@@ -63,11 +63,11 @@ The game has gone through CI Python Linter Code validator and has been manually 
  ## Known Bugs
  * Resolved
    * The game failed to annouance the right winner, it annouanced the looser as winner.
-     * The game crashed after ship number four were found, so you were unable to see that the last shot really was a hit.
+    * The game crashed after ship number four were found, so you were unable to see that the last shot really was a hit.
     
 
 * Unresolved
- * No unresolved bugs.
+  * No unresolved bugs.
  
 
 ## Additional Testing 

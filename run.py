@@ -2,7 +2,7 @@
 Import randint from random
 """
 from random import randint
-
+# This class is inlfuenced by the CI scoping video.
 class GameBoard():
     """
     GameBoard is the the class, that sets the size, number of ships, name, type (if player or computer),
