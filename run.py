@@ -97,9 +97,9 @@ def run_game():
     num_of_ships = 4
 
     print("-" * 35)
-    print("Welcome to Battleship Game")
+    print("Welcome to Battleship Game \n")
     print("Guess and shoot at the enemy's board")
-    print("The first to destroy all of the enemy's ships wins.")
+    print("The first to destroy all of the enemy's ships wins. \n")
     print(f"Board size: {size}. Number of ships: {num_of_ships}")
     print("Top left corner is row: 0 col: 0 \n")
 
