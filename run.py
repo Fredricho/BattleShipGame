@@ -130,7 +130,7 @@ def run_game():
     print("Welcome to Battleship Game \n")
     print("Guess and shoot at the enemy's board")
     print("The first to destroy all of the enemy's ships wins. \n")
-    print(f"Board size: {size}. Number of ships: {num_of_ships}")
+    print(f"Board size: {size}. Number of ships: {num_of_ships} \n")
     print("Top left corner is row: 0 col: 0 \n")
 
     while True:
@@ -158,7 +158,7 @@ def run_game():
         print(f"{player_board.name} {result} the game!")
 
         while True:
-            play_again = input("Do you want to play again? (yes/no) \n ")
+            play_again = input("Do you want to play another round? ('yes' or 'no') \n ")
             if play_again.lower() == "yes":
                 break
             elif play_again.lower() == "no":
