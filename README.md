@@ -1,32 +1,133 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The BattleShip Game
 
-Welcome,
+The Battleship Game is a game that's played in the terminal against the computer.
+The rules of this game is simple, you should guess were the opponets(computer's) ships are located and destroy them. Valid guesses are integers from 0 - 4, 0,0 is top left. This game has four ships that you need to destroy to win the battle.
+When you hit a ship, you will see "@" on the board and "Hit", if you miss you will see "X" and "Miss.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
 
-## Reminders
+The game is live here, Enjoy the game!: [BattleShipGame](https://fredricho.github.)
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+<img src="assets/images/.png" 
+  style="height:200px width:200px;">
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Existing Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+  * ### Randomly generated boards.
+    * Randomly adds ships to the board, so they will be located at diffrent places after each battle.
 
-Connect your GitHub repository and deploy as normal.
+    <img src="assets/images/.png" style="height:auto; width:200px;">
 
-## Constraints
+  * ### Play against the computer
+    * The player plays against the computer
+    * The user can input their name
+    * Handles given coordinates from the player.
+     
+   * ### Validates input
+    * Validates all inputs from player, the name has to be just letters from the alphabet. 
+    Valid coordinates are integers from 0 -4. You can't guess at the same coordinate twice.
+    The data is stored in the board class.
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+<img src="assets/images/.png" style="height:auto; width:500px;">
+<img src="assets/images/.png" style="height:auto; width:500px;">
+<img src="assets/images/.png" style="height:auto; width:500px;">
 
----
+ 
 
-Happy coding!
+## Future Features
+* Let the user place out their own ships.
+* Let the player decide the board size and number of ships
+* Let the user enter a key to restart/rematch the game.
+
+
+
+
+## Technologies Used
+* Python - Provides all of the code that runs the game.
+* Heroku - Used to deploy the site. 
+* Github - Used to host the site and make edits. 
+
+## Testing 
+
+### Code Validation
+
+The game has gone through CI Python Linter Code validator and has been manually tested by me for many hours and also by peers, no errors were reported. The CI Linter Code found several minor errors such as whitespaces, unexpected amount of blanklines too long lines etc. All of the errors were fixed, beside the too long lines, the longest one were a comment of the code and the other were printing messages for the player. Images of the result below(You cannot see all of the errors, there were a few more.)
+
+
+* ### CI Python Linter Code
+<img src="assets/images/.png">
+
+ ## Known Bugs
+ * Resolved
+   * The game failed to annouance the right winner, it annouanced the looser as winner.
+     * The game crashed after ship number four were found, so you were unable to see that the last shot really was a hit.
+    
+
+* Unresolved
+ * No unresolved bugs.
+ 
+
+## Additional Testing 
+
+
+ 
+
+   ## Deployment
+ The site was deployed on Heroku, and the steps to it is below:
+ 1. Heroku > New > App Name(A unique one!) > Region > Creat App
+ 2. Go to settings > Reveal Config Vars
+ 3. Add Key: PORT and Value: 8000 ( If other Vars needs to be added add them here.) > Add
+ 4. Underneath Reveal config Vars > Add buildpack > Add Python > Save Changes > nodejs > Save Changes(IMPORTANT they are added in this order)
+ 5. Go to Deploy > Choose GitHub as Deployment Method > Connect go GitHub
+ 6. Search for your repository (battleship-game) > press connect
+ 7. Choose "Enable automatic deploys or manual deploy"
+ 8. If manual click "Deploy Branch"
+ 9. Click view, to see the deployed game
+
+ <img src="assets/images/.png" style="height:auto; width:40rem;">
+
+ [Link to repository](https://github.com/Fredricho/battleship-game)
+
+  
+  ## To fork the repository on GitHub
+
+A copy of the repository can be made and changes to the copy won't affect the original repository. Below are the steps to fork it:
+
+1. Login in and go to [Link to repository](https://github.com/Fredricho/battleship-game)
+2. The fork icon is top right, click that button to make a copy of the original repository.
+
+<img src="assets/images/fork.png" style="height:auto; width:40rem;">
+
+## Create a local clone of this project
+
+Here comes a guide to creating a local clone of this project:
+
+1. Go to repository
+2. Press code - button 
+3. Click the copy button. 
+4. In the wanted IDE, Open Git Bush. 
+5. Change the current working directory to the location you prefer to get it cloned to. 
+6. Type git clone and CTRL-V/Paste the URL from the previous step from Github 
+7. Hit enter and a clone will be created.
+
+<img src="assets/images/clone.png" style="height:auto; width:40rem;">
+
+## Credits
+* Heroku- For make it possible to deploy.
+* CI Scoping Video, Battleship Game
+* Gitpod - For giving me the nessecary tools to develop a site. 
+* ChatGpt - For generated Quiz questions and answers.
+* W3schools - For all of the information, always useful.
+* My mentor.
+* Stack Overflow
+* The slack community on CI
+
+
+
+## Acknowledgements
+This game is my third project at Code Institute, it is my second game to develop, but the first in the python language. I think python is easier than JS, but I would lie if I said that I didn't struggle with the indentations and much more. I had bigger plans in my head for the game, but the lack of time for the project is really your enemy.. 
+
+Fredricho 2023
