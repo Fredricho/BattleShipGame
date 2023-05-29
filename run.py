@@ -21,10 +21,11 @@ class GameBoard():
         self.guesses.append((x, y))
 
         if (x, y) in self.ships:
-            self.board[x][y] = "@"
+            self.ships.remove((x, y))  
+            self.board[x][y] = "@"  
             return "Hit"
         else:
-            self.board[x][y] = "X"
+            self.board[x][y] = "X"  
             return "Miss"
 
     def add_ship(self, x, y, type="computer"):
