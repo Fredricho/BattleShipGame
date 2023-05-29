@@ -59,11 +59,11 @@ def play_game(player_board, computer_board):
 
         while True:
             try:
-                x = int(input(f"{player_board.name}, enter the row: \n "))
-                y = int(input(f"{player_board.name}, enter the col: \n "))
+                x = int(input(f"{player_board.name}, enter the row, Integers: 0 -4: \n "))
+                y = int(input(f"{player_board.name}, enter the col Intergers: 0-4 : \n "))
 
                 if not valid_coordinates(x, y, computer_board):
-                    print("Invalid coordinates. Try again.")
+                    print("Invalid coordinates. Guess at a integer from 0 - 4")
                     continue
 
                 result = computer_board.make_guess(x, y)
