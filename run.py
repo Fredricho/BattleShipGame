@@ -101,7 +101,7 @@ def run_game():
     print("Guess and shoot at the enemy's board")
     print("The first to destroy all of the enemy's ships wins.")
     print(f"Board size: {size}. Number of ships: {num_of_ships}")
-    print("Top left corner is row: 0 col: 0")
+    print("Top left corner is row: 0 col: 0 \n")
 
     while True:
         username = input("Enter your name: \n ")
