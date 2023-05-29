@@ -1,6 +1,13 @@
+"""
+Import randint from random
+"""
 from random import randint
 
 class GameBoard():
+    """
+    GameBoard is the the class, that sets the size, number of ships, name, type (if player or computer),
+    . Has the methods of printing the board and also add ships and guesses.
+    """
     def __init__(self, size, num_of_ships, name, type):
         self.size = size
         self.board = [["." for _ in range(size)] for _ in range(size)]
@@ -35,14 +42,23 @@ class GameBoard():
             self.ships.append((x, y))
 
 def random_point(size):
+    """
+    Function to return a random coordinate between 0 and the given size of the board
+    """
     return randint(0, size - 1)
 
 def valid_coordinates(x, y, board):
+    """
+    Check if the given coordinate is valid for the board's range
+    """
     if x < 0 or y < 0 or x >= board.size or y >= board.size:
         return False
     return True
 
 def populate_board(board):
+    """
+    The function for placing out the correc amount of ships
+    """
     while True:
         x = random_point(board.size)
         y = random_point(board.size)
@@ -51,6 +67,9 @@ def populate_board(board):
             break
 
 def play_game(player_board, computer_board):
+    """
+    This function handles the guesses, validation and checks if all of the ships were found.
+    """
     while True:
         print(f"{player_board.name}'s Board:")
         player_board.print_board()
@@ -93,6 +112,10 @@ def play_game(player_board, computer_board):
             return "Loose"
 
 def run_game():
+    """
+    This is the function that runs the game, sets the size and num of ships, validates
+    the username and asks for a rematch
+    """
     size = 5
     num_of_ships = 4
 
