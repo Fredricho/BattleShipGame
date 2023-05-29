@@ -100,7 +100,7 @@ def play_game(player_board, computer_board):
                 print("Invalid input. Only integers are allowed.")
 
         if len(computer_board.ships) == 0:
-            print(f"Congratulations, {player_board.name}! You found all the computer's ships!")
+            print(f"Congratulations, {player_board.name}! You destroyed all the computer's ships!")
             return "Won"
 
         print("Computer is making a guess...")
@@ -114,7 +114,7 @@ def play_game(player_board, computer_board):
                 break
 
         if len(player_board.ships) == 0:
-            print("The computer found all your ships! You lost the battle : /.")
+            print("The computer destroyed all your ships! You lost the battle : /.")
             return "Lost"
 
 
