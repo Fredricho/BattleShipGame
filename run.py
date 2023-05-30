@@ -62,7 +62,7 @@ def valid_coordinates(x, y, board):
 
 def populate_board(board):
     """
-    The function for placing out the correct amount of ships
+    The function for randomly place out the correct amount of ships, checks so the the coordinate is not occupied.
     """
     while True:
         x = random_point(board.size)
@@ -79,13 +79,13 @@ def play_game(player_board, computer_board):
     while True:
         print(f"{player_board.name}'s Board:")
         player_board.print_board()
-        print("Computer's Board:")
+        print("Computer's Board: ")
         computer_board.print_board()
 
         while True:
             try:
-                x = int(input(f"{player_board.name}, Insert your row coordinates, Integers: 0 - 4: \n "))
-                y = int(input(f"{player_board.name}, Insert your column coordinates, Integers: 0 - 4 : \n "))
+                x = int(input(f"{player_board.name}, Insert your integers coordinates, Row: 0 - 4: \n "))
+                y = int(input(f"{player_board.name}, Insert your integers coordinates, Column: 0 - 4 : \n "))
 
                 if not valid_coordinates(x, y, computer_board):
                     print("Invalid coordinates. Guess at a integer from 0 - 4")
@@ -100,7 +100,7 @@ def play_game(player_board, computer_board):
                 print("Invalid input. Only integers are allowed.")
 
         if len(computer_board.ships) == 0:
-            print(f"Congratulations, {player_board.name}! You destroyed all the computer's ships!")
+            print(f"Congratulations, {player_board.name}! You destroyed all the computer's ships!\n")
             return "Won"
 
         print("Computer is making a guess...")
@@ -114,7 +114,7 @@ def play_game(player_board, computer_board):
                 break
 
         if len(player_board.ships) == 0:
-            print("The computer destroyed all your ships! You lost the battle : /.")
+            print("The computer destroyed all your ships! You lost the battle : /.\n")
             return "Lost"
 
 
@@ -130,12 +130,15 @@ def run_game():
     print("Welcome to Battleship Game \n")
     print("Guess and shoot at the enemy's board")
     print("The first to destroy all of the enemy's ships wins. \n")
+    print("-" * 35)
     print(f"Board size: {size}. Number of ships: {num_of_ships} \n")
     print("Top left corner is row: 0 col: 0 \n")
+    print("-" * 35)
 
     while True:
         username = input("Enter your name: \n ")
         if username.isalpha():
+            print("-" * 35)
             break
         else:
             print("Invalid name. Only letters are allowed.")
