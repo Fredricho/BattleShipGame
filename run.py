@@ -2,6 +2,7 @@
 Import randint from random
 """
 from random import randint
+
 # This class is inlfuenced by the CI scoping video.
 
 
@@ -120,8 +121,7 @@ def play_game(player_board, computer_board):
 
 def run_game():
     """
-    This is the function that runs the game, sets the size and num of ships, validates
-    the username and asks for a rematch
+    This is the function that runs the game, sets the size and num of ships, validates the username and asks for a rematch
     """
     size = 5
     num_of_ships = 4
@@ -168,7 +168,7 @@ def run_game():
                 print("Thank you for playing! Goodbye!")
                 return
             else:
-                print("Invalid input. Please answer with either 'yes' or 'no'.")
+                print("Invalid input. Please answer with either 'yes' or 'no'")
 
 
 run_game()

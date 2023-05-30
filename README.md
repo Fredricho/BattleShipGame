@@ -79,7 +79,12 @@ The game has gone through CI Python Linter Code validator and has been manually 
  
 
 ## Additional Testing 
-
+* The game is tested in diffrent browsers:
+  * Google Chrome: CHECK, runs with no errors.
+  * Microsoft Edge: CHECK, runs with no errors.
+  * Mozilla Firefoz: CHECK, runs with no errors.  
+* Here an image of my lighthouse report: 
+<img src="assets/images/light.png" style="height:auto; width:40rem;">
 
  
 
