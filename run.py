@@ -141,7 +141,7 @@ def run_game():
             print("-" * 35)
             break
         else:
-            print("Invalid name. Only letters are allowed.")
+            print("Invalid name. Only letters (A-Z) are allowed.")
 
     while True:
         computer_board = GameBoard(size, num_of_ships, "computer", type="computer")
